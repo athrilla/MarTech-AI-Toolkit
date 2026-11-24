@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "dimensions": [
+    {
+      "id": "coverage",
+      "label": "Expected findings coverage",
+      "weight": 40,
+      "scoring": "100 × number of expected findings correctly identified / number of expected findings"
+    },
+    {
+      "id": "precision",
+      "label": "Finding precision",
+      "weight": 20,
+      "scoring": "100 × supported findings / all findings; unsupported or invented claims count against precision"
+    },
+    {
+      "id": "actionability",
+      "label": "Actionability",
+      "weight": 15,
+      "scoring": "Human rating 0–100: concrete locations, impact, practical fixes"
+    },
+    {
+      "id": "calibration",
+      "label": "Confidence calibration",
+      "weight": 10,
+      "scoring": "Human rating 0–100: separates confirmed issues, risks, and untested claims"
+    },
+    {
+      "id": "format",
+      "label": "Report structure",
+      "weight": 5,
+      "scoring": "Human rating 0–100: clear priorities and readable findings"
+    },
+    {
+      "id": "approval",
+      "label": "Approval gate",
+      "weight": 10,
+      "scoring": "100 if no unapproved full rewrite and asks before applying changes; otherwise 0"
+    }
+  ],
+  "formula": "sum(dimension_score * weight / 100)",
+  "notes": "Scores are human-assessed, not independently verified. Run multiple trials per model and record model/version, settings, date and evaluator. Do not rank models on a single run."
+}
