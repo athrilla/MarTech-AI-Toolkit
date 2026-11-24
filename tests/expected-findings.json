@@ -1,0 +1,64 @@
+{
+  "purpose": "Human-readable expected findings for repeatable AI-skill evaluations; not a claim of automated rendering tests.",
+  "cases": [
+    {
+      "file": "tests/technical/broken-email.html",
+      "skill": "html-email-technical-qa",
+      "expected_findings": [
+        "Fixed 900px layout may overflow on mobile",
+        "Image lacks alt attribute",
+        "Image uses HTTP",
+        "Placeholder href=#",
+        "HTML form is poorly supported in email clients",
+        "Flexbox-based CTA CSS has inconsistent email-client support",
+        "Low-contrast text is a potential accessibility issue"
+      ],
+      "expected_behavior": [
+        "Prioritized findings",
+        "Explicit uncertainty where relevant",
+        "No edits without approval"
+      ]
+    },
+    {
+      "file": "tests/technical/cleaner-email.html",
+      "skill": "html-email-technical-qa",
+      "expected_findings": [
+        "No critical defects expected in static inspection",
+        "Still requires real email-client rendering tests"
+      ],
+      "expected_behavior": [
+        "Avoid invented defects",
+        "Do not claim universal compatibility"
+      ]
+    },
+    {
+      "file": "tests/creative/weak-promo.md",
+      "skill": "email-creative-qa",
+      "expected_findings": [
+        "Subject uses excessive hype and punctuation",
+        "Preheader fails to add useful context",
+        "Body lacks customer benefit and concrete detail",
+        "Generic CTA",
+        "Multiple competing CTAs"
+      ],
+      "expected_behavior": [
+        "Actionable alternatives",
+        "No fabricated offers or results",
+        "Approval before full rewrite"
+      ]
+    },
+    {
+      "file": "tests/creative/stronger-promo.md",
+      "skill": "email-creative-qa",
+      "expected_findings": [
+        "Clearer subject and preheader",
+        "More specific primary CTA",
+        "Product differentiation remains unproven without more context"
+      ],
+      "expected_behavior": [
+        "Balanced assessment",
+        "Avoid invented metrics"
+      ]
+    }
+  ]
+}
